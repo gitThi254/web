@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import BreadCrum from "../components/BreadCrum";
 import Meta from "../components/Meta";
 import ReactStars from "react-rating-stars-component";
+import ProductCard from "../components/ProductCard";
+import Color from "../components/Color";
 const OurStore = () => {
   const [grid, setGrid] = useState(4);
   const gridSetter = (i) => {
@@ -75,23 +77,7 @@ const OurStore = () => {
                   </div>
                   <h5 className='sub-title'>Colors</h5>
                   <div>
-                    <ul className='colors ps-0'>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
+                    <Color />
                   </div>
                 </div>
                 <h5 className='sub-title'>Size</h5>
@@ -224,7 +210,7 @@ const OurStore = () => {
                     <div className='d-flex align-items-center  gap-10 grid'>
                       <img
                         onClick={() => {
-                          setGrid(1);
+                          gridSetter(3);
                         }}
                         src='images/gr.svg'
                         alt='grid'
@@ -232,7 +218,7 @@ const OurStore = () => {
                       />
                       <img
                         onClick={() => {
-                          setGrid(2);
+                          gridSetter(4);
                         }}
                         src='images/gr2.svg'
                         alt='grid'
@@ -240,7 +226,7 @@ const OurStore = () => {
                       />
                       <img
                         onClick={() => {
-                          setGrid(3);
+                          gridSetter(6);
                         }}
                         src='images/gr3.svg'
                         alt='grid'
@@ -248,7 +234,7 @@ const OurStore = () => {
                       />
                       <img
                         onClick={() => {
-                          setGrid(4);
+                          gridSetter(12);
                         }}
                         src='images/gr4.svg'
                         alt='grid'
@@ -258,7 +244,12 @@ const OurStore = () => {
                   </div>
                 </div>
               </div>
-              <div className='products-list pb-5'></div>
+              <div className='products-list pb-5'>
+                <div className='d-flex gap-10 flex-wrap'>
+                  <ProductCard grid={grid} />
+                  <ProductCard grid={grid} />
+                </div>
+              </div>
             </div>
           </div>
         </div>

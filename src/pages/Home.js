@@ -258,10 +258,18 @@ const Home = () => {
             <h3 className='section-heading'>Special Products</h3>
           </div>
           <div className='row'>
-            <SpecialProduct />
-            <SpecialProduct />
-            <SpecialProduct />
-            <SpecialProduct />
+            <div className='col-3'>
+              <SpecialProduct />
+            </div>
+            <div className='col-3'>
+              <SpecialProduct />
+            </div>
+            <div className='col-3'>
+              <SpecialProduct />
+            </div>
+            <div className='col-3'>
+              <SpecialProduct />
+            </div>
           </div>
         </div>
       </section>
